@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="header-nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#works">Works</a>
+    <a href="#experience">Experience</a>
+    <a href="#hobby">Hobby</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="container">
+    <div class="profile-header">
+      <img src="image_profile.jpg" class="profile-img" style="margin-inline-start: 1.25rem;">
+      <div class="profile-text" style="margin-inline-start: 7rem;">
+        <h1>佐藤 雛歌 / Hinata Sato</h1>
+        <p>🎂 2005年3月8日</p>
+        <p>武蔵野大学データサイエンス学部</p>
+        <p>Engineer / Data Science Student</p>
+      </div>
+    </div>
+    <p style="margin-inline-start: 3rem;">
+      ご覧いただきありがとうございます。<br>
+      武蔵野大学データサイエンス学部の佐藤雛歌です。<br>
+      現在はインターンでWebアプリケーションの開発に取り組んでいます。<br>
+      分からないことも、まず自分で試しながら少しずつ理解していくのが好きです。<br>
+      海外旅行が好きで、知らない事を知るのが好きです。
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills-grid">
+
+    <article class="skill-card">
+      <div class="skill-card__icon" aria-hidden="true">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML CSS" width="60" height="60" loading="lazy">
+      </div>
+      <div class="skill-card__body">
+        <h3>HTML / CSS</h3>
+        <p>Webページのフロントエンドに使用</p>
+        <div class="stars" role="img" aria-label="習熟度 4段階中4">★★★★☆</div>
+      </div>
+    </article>
+
+    <article class="skill-card">
+      <div class="skill-card__icon" aria-hidden="true">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" width="60" height="60" loading="lazy">
+      </div>
+      <div class="skill-card__body">
+        <h3>JavaScript</h3>
+        <p>React / Node.js</p>
+        <div class="stars" role="img" aria-label="習熟度 4段階中3">★★★☆☆</div>
+      </div>
+    </article>
+
+    <article class="skill-card">
+      <div class="skill-card__icon" aria-hidden="true">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" width="60" height="60" loading="lazy">
+      </div>
+      <div class="skill-card__body">
+        <h3>Python</h3>
+        <p>Flask / データ分析</p>
+        <div class="stars" role="img" aria-label="習熟度 4段階中4">★★★★☆</div>
+      </div>
+    </article>
+
+    <article class="skill-card">
+      <div class="skill-card__icon" aria-hidden="true">
+        <img src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png" alt="SQL" width="60" height="60" loading="lazy">
+      </div>
+      <div class="skill-card__body">
+        <h3>SQL</h3>
+        <p>MySQL / PostgreSQL</p>
+        <div class="stars" role="img" aria-label="習熟度 4段階中3">★★★☆☆</div>
+      </div>
+    </article>
+
+    <article class="skill-card">
+      <div class="skill-card__icon" aria-hidden="true">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968338.png" alt="PHP" width="60" height="60" loading="lazy">
+      </div>
+      <div class="skill-card__body">
+        <h3>PHP</h3>
+        <p>サーバーサイドWeb / Laravel など</p>
+        <div class="stars" role="img" aria-label="習熟度 4段階中3">★★★☆☆</div>
+      </div>
+    </article>
+
+    <article class="skill-card">
+      <div class="skill-card__icon" aria-hidden="true">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" alt="Docker" width="60" height="60" loading="lazy">
+      </div>
+      <div class="skill-card__body">
+        <h3>Docker</h3>
+        <p>コンテナ / 開発・検証環境の構築</p>
+        <div class="stars" role="img" aria-label="習熟度 4段階中1">★☆☆☆</div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="works">
+  <h2>Works</h2>
+  <p id="works-protocol-hint" class="works-protocol-hint" hidden>
+    ブラウザによっては PDF が表示されないことがあります。HTML を <strong>ローカルサーバー経由</strong>（例: ターミナルで <code>python3 -m http.server</code>）で開くか、各カードの「別タブで開く」からご覧ください。
+  </p>
+  <div class="works-grid">
+
+    <article class="works-card" data-pdfs="work_Tripnote.pdf">
+      <div class="works-card__preview works-card__preview--single">
+        <div class="works-pdf-slot works-pdf-slot--compact">
+          <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+          <embed class="works-pdf-embed" type="application/pdf" src="" title="Tripnote プレビュー" />
+        </div>
+      </div>
+      <button type="button" class="works-card__trigger" id="works-trigger-1" aria-controls="works-panel-1" aria-expanded="false">
+        <div class="works-text">
+          <span class="works-card__chevron" aria-hidden="true"></span>
+          <h3>Tripnote</h3>
+          <p>旅行の記録ができるWebアプリ です。</p>
+          <a href="https://tech-base.net/tb-270275/tripnote/index.php" target="_blank" rel="noopener noreferrer">https://tech-base.net/tb-270275/tripnote/index.php</a>
+        </div>
+      </button>
+      </div>
+    </article>
+
+    <article class="works-card" data-pdfs="work_random.pdf">
+      <div class="works-card__preview works-card__preview--single">
+        <div class="works-pdf-slot works-pdf-slot--compact">
+          <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+          <embed class="works-pdf-embed" type="application/pdf" src="" title="random プレビュー" />
+        </div>
+      </div>
+      <button type="button" class="works-card__trigger" id="works-trigger-2" aria-controls="works-panel-2" aria-expanded="false">
+        <div class="works-text">
+          <span class="works-card__chevron" aria-hidden="true"></span>
+          <h3>random</h3>
+          <p>取り組みの資料（PDF）です。</p>
+        </div>
+      </button>
+      <div class="works-card__panel" id="works-panel-2" role="region" aria-labelledby="works-trigger-2" hidden>
+        <div class="works-panel__pdf">
+          <div class="works-pdf-slot works-pdf-slot--tall">
+            <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+            <embed class="works-pdf-embed works-pdf-embed--tall" type="application/pdf" src="" title="random" />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="works-card" data-pdfs="work_chronotype.pdf">
+      <div class="works-card__preview works-card__preview--single">
+        <div class="works-pdf-slot works-pdf-slot--compact">
+          <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+          <embed class="works-pdf-embed" type="application/pdf" src="" title="Chronotype プレビュー" />
+        </div>
+      </div>
+      <button type="button" class="works-card__trigger" id="works-trigger-4" aria-controls="works-panel-4" aria-expanded="false">
+        <div class="works-text">
+          <span class="works-card__chevron" aria-hidden="true"></span>
+          <h3>Chronotype</h3>
+          <p>クロノタイプに関する研究をしようとしたらただ自分の分析をしていただけでした</p>
+        </div>
+      </button>
+      <div class="works-card__panel" id="works-panel-4" role="region" aria-labelledby="works-trigger-4" hidden>
+        <div class="works-panel__pdf">
+          <div class="works-pdf-slot works-pdf-slot--tall">
+            <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+            <embed class="works-pdf-embed works-pdf-embed--tall" type="application/pdf" src="" title="Chronotype" />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="works-card works-card--multi" data-pdfs="work_Piano score slide.pdf|work_Piano score.pdf">
+      <div class="works-card__preview works-card__preview--carousel">
+        <div class="works-card__preview-stack">
+          <div class="works-card__iframe-wrap">
+            <div class="works-pdf-slot works-pdf-slot--carousel">
+              <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+              <embed class="works-pdf-embed" type="application/pdf" src="" title="PDF プレビュー" />
+            </div>
+          </div>
+          <button type="button" class="works-card__arrow works-card__arrow--prev" aria-label="前のPDF">&lsaquo;</button>
+          <button type="button" class="works-card__arrow works-card__arrow--next" aria-label="次のPDF">&rsaquo;</button>
+        </div>
+        <div class="works-card__meta"><span class="works-card__idx">1</span> / <span class="works-card__total">2</span></div>
+      </div>
+      <button type="button" class="works-card__trigger" id="works-trigger-3" aria-controls="works-panel-3" aria-expanded="false">
+        <div class="works-text">
+          <span class="works-card__chevron" aria-hidden="true"></span>
+          <h3>ピアノ発表・成果報告</h3>
+          <p>発表スライドと成果報告会の PDF です。</p>
+        </div>
+      </button>
+      <div class="works-card__panel" id="works-panel-3" role="region" aria-labelledby="works-trigger-3" hidden>
+        <div class="works-panel__carousel">
+          <div class="works-panel__carousel-stack">
+            <div class="works-panel__iframe-wrap">
+              <div class="works-pdf-slot works-pdf-slot--panel-carousel">
+                <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+                <embed class="works-pdf-embed works-pdf-embed--tall works-pdf-embed--panel-slide" type="application/pdf" src="" title="PDF 表示" />
+              </div>
+            </div>
+            <button type="button" class="works-panel__arrow works-panel__arrow--prev" aria-label="前のPDF">&lsaquo;</button>
+            <button type="button" class="works-panel__arrow works-panel__arrow--next" aria-label="次のPDF">&rsaquo;</button>
+          </div>
+          <div class="works-panel__meta"><span class="works-panel__idx">1</span> / <span class="works-panel__total">2</span></div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline-container" id="timelineBox">
+    <div class="experience-scroll-inner">
+
+    <div class="timeline">
+
+      <!-- 過去（上にスクロールで見える） -->
+      <div class="timeline-item">
+        <div class="timeline-date">2005-3</div>
+        <div class="timeline-content">
+          <h3>生まれた 👶🏻</h3>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2011</div>
+        <div class="timeline-content">
+          <h3>小学校入学</h3>
+          <p>化石とか虫が好きでした。外で遊ぶのも好き！</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2017-4</div>
+        <div class="timeline-content">
+          <h3>静岡県富士見中学校入学</h3>
+          <p>ハマった自由研究を頑張ると決めて、私立の中高一貫校に通いました。
+            ルミノール反応について研究をしていました。
+          </p>
+          <p>部活：カルタ部 箏曲部</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2020-4</div>
+        <div class="timeline-content">
+          <h3>静岡県富士見高等学校入学</h3>
+          <p>中学からそのまま内部進学をしました。</p>
+          <p>部活：将棋部 ボランティア</p>
+        </div>
+      </div>
+
+      <!-- 初期スクロール位置 -->
+      <div class="timeline-item" id="start-point">
+        <div class="timeline-date">2023-4</div>
+        <div class="timeline-content">
+          <h3>武蔵野大学データサイエンス学部入学</h3>
+          <p>データサイエンスとプログラミングを体系的に学ぶために入学しました。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2025-3</div>
+        <div class="timeline-content">
+          <h3>Open Hack U 2025 OSAKA ハッカソン参加</h3>
+          <p>外部ハッカソンに参加し、Webアプリ開発を実践。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2025-8</div>
+        <div class="timeline-content">
+          <h3>Asian Bridge 長期インターン参加 (〜現在)</h3>
+          <p>インターンでは、フロントエンドを担当し、成果物を完成させる経験を得ました。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2024-9</div>
+        <div class="timeline-content">
+          <h3>エンカレッジ・テクノロジ 二週間インターン参加</h3>
+          <p>社員のPCログの分析を行い、データ分析の基礎を学びました。</p>
+        </div>
+      </div>
+    </div>
+
+  <div class="experience-emoji-rail" id="activityRail" aria-label="習い事（絵文字は開始時期、縦線は続けた期間の目安）">
+
+    <div class="activity-span" data-start-age="3" data-end-age="15" data-line-scale="0.88">
+      <div class="activity-span__head">
+        <button type="button" class="activity-span__hit" aria-describedby="rail-tip-1" aria-label="水泳（3歳〜15歳）"><span aria-hidden="true">🏊</span></button>
+        <span id="rail-tip-1" class="activity-span__tooltip" role="tooltip">水泳（3歳〜15歳）</span>
+      </div>
+      <div class="activity-span__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="activity-span" data-start-age="3" data-end-age="8" data-line-scale="0.96">
+      <div class="activity-span__head">
+        <button type="button" class="activity-span__hit" aria-describedby="rail-tip-2" aria-label="公文（3歳〜8歳）"><span aria-hidden="true">📘</span></button>
+        <span id="rail-tip-2" class="activity-span__tooltip" role="tooltip">公文・くもん（3歳〜8歳）</span>
+      </div>
+      <div class="activity-span__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="activity-span" data-start-age="5" data-end-age="14" data-line-scale="0.9">
+      <div class="activity-span__head">
+        <button type="button" class="activity-span__hit" aria-describedby="rail-tip-3" aria-label="習字（5歳〜14歳）"><span aria-hidden="true">🖌️</span></button>
+        <span id="rail-tip-3" class="activity-span__tooltip" role="tooltip">習字（5歳〜14歳）</span>
+      </div>
+      <div class="activity-span__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="activity-span" data-start-age="6" data-end-age="12" data-line-scale="1.04">
+      <div class="activity-span__head">
+        <button type="button" class="activity-span__hit" aria-describedby="rail-tip-4" aria-label="ドッジボール・小学校の間"><span aria-hidden="true">🤾</span></button>
+        <span id="rail-tip-4" class="activity-span__tooltip" role="tooltip">ドッジボール（6〜12歳）</span>
+      </div>
+      <div class="activity-span__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="activity-span" data-start-age="8" data-end-age="18" data-line-scale="0.86">
+      <div class="activity-span__head">
+        <button type="button" class="activity-span__hit" aria-describedby="rail-tip-5" aria-label="ピアノ（8歳〜18歳）"><span aria-hidden="true">🎹</span></button>
+        <span id="rail-tip-5" class="activity-span__tooltip" role="tooltip">ピアノ（8歳〜18歳）</span>
+      </div>
+      <div class="activity-span__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="activity-span" data-start-age="9" data-end-age="18" data-line-scale="0.86">
+      <div class="activity-span__head">
+        <button type="button" class="activity-span__hit" aria-describedby="rail-tip-6" aria-label="塾（9歳〜18歳）"><span aria-hidden="true">📚</span></button>
+        <span id="rail-tip-6" class="activity-span__tooltip" role="tooltip">塾（9歳〜18歳）</span>
+      </div>
+      <div class="activity-span__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="activity-span" data-start-age="10" data-end-now="true" data-line-scale="1">
+      <div class="activity-span__head">
+        <button type="button" class="activity-span__hit" aria-describedby="rail-tip-7" aria-label="英会話（10歳〜現在）"><span aria-hidden="true">🗣️</span></button>
+        <span id="rail-tip-7" class="activity-span__tooltip" role="tooltip">英会話（10歳〜現在）</span>
+      </div>
+      <div class="activity-span__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="activity-span" data-start-age="11" data-end-age="15" data-line-scale="0.98">
+      <div class="activity-span__head">
+        <button type="button" class="activity-span__hit" aria-describedby="rail-tip-8" aria-label="科学教室（11歳〜15歳）"><span aria-hidden="true">🔬</span></button>
+        <span id="rail-tip-8" class="activity-span__tooltip" role="tooltip">科学教室（11歳〜15歳）</span>
+      </div>
+      <div class="activity-span__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="activity-span" data-start-age="12" data-end-age="18" data-line-scale="0.92">
+      <div class="activity-span__head">
+        <button type="button" class="activity-span__hit" aria-describedby="rail-tip-9" aria-label="静岡大学・受験など（12歳〜18歳）"><span aria-hidden="true">🏛️</span></button>
+        <span id="rail-tip-9" class="activity-span__tooltip" role="tooltip">静大 化学教室の続き（12歳〜18歳）</span>
+      </div>
+      <div class="activity-span__line" aria-hidden="true"></div>
+    </div>
+
+  </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 追加した趣味 -->
+<section id="hobby">
+  <h2>Hobby</h2>
+
+  <div class="hobby-grid">
+
+    <div class="hobby-card" data-hobby-images="image_travel.jpg|image_travel1.jpg|image_travel2.jpg|image_travel3.jpg|image_travel4.jpg|image_travel5.jpg|image_travel6.jpg">
+      <div class="hobby-card__photo-rail">
+        <div class="hobby-card__photo-stack">
+          <div class="hobby-card__photo-frame">
+            <img class="hobby-card__photo" src="" alt="Travel の写真">
+          </div>
+          <button type="button" class="hobby-card__arrow hobby-card__arrow--prev" aria-label="前の写真">&lsaquo;</button>
+          <button type="button" class="hobby-card__arrow hobby-card__arrow--next" aria-label="次の写真">&rsaquo;</button>
+        </div>
+        <div class="hobby-card__photo-meta" hidden><span class="hobby-card__photo-idx">1</span> / <span class="hobby-card__photo-total">1</span></div>
+      </div>
+      <button type="button" class="hobby-card__trigger" id="hobby-trigger-1" aria-controls="hobby-panel-1" aria-expanded="false">
+        <div class="hobby-text">
+          <span class="hobby-card__chevron" aria-hidden="true"></span>
+          <h3>Travel</h3>
+          <p>だいたいホームステイをしています！</p>
+        </div>
+    </div>
+
+    <div class="hobby-card" data-hobby-images="image_music.jpg">
+      <div class="hobby-card__photo-rail">
+        <div class="hobby-card__photo-stack">
+          <div class="hobby-card__photo-frame">
+            <img class="hobby-card__photo" src="" alt="Music の写真">
+          </div>
+          <button type="button" class="hobby-card__arrow hobby-card__arrow--prev" aria-label="前の写真">&lsaquo;</button>
+          <button type="button" class="hobby-card__arrow hobby-card__arrow--next" aria-label="次の写真">&rsaquo;</button>
+        </div>
+        <div class="hobby-card__photo-meta" hidden><span class="hobby-card__photo-idx">1</span> / <span class="hobby-card__photo-total">1</span></div>
+      </div>
+      <button type="button" class="hobby-card__trigger" id="hobby-trigger-2" aria-controls="hobby-panel-2" aria-expanded="false">
+        <div class="hobby-text">
+          <span class="hobby-card__chevron" aria-hidden="true"></span>
+          <h3>Music</h3>
+          <p>小さい頃からエレクトーンやピアノなどを習っていて、なんでも聞きます^_^</p>
+        </div>
+    </div>
+
+    <div class="hobby-card" data-hobby-images="image_cafe.jpg">
+      <div class="hobby-card__photo-rail">
+        <div class="hobby-card__photo-stack">
+          <div class="hobby-card__photo-frame">
+            <img class="hobby-card__photo" src="" alt="Cafe の写真">
+          </div>
+          <button type="button" class="hobby-card__arrow hobby-card__arrow--prev" aria-label="前の写真">&lsaquo;</button>
+          <button type="button" class="hobby-card__arrow hobby-card__arrow--next" aria-label="次の写真">&rsaquo;</button>
+        </div>
+        <div class="hobby-card__photo-meta" hidden><span class="hobby-card__photo-idx">1</span> / <span class="hobby-card__photo-total">1</span></div>
+      </div>
+      <button type="button" class="hobby-card__trigger" id="hobby-trigger-3" aria-controls="hobby-panel-3" aria-expanded="false">
+        <div class="hobby-text">
+          <span class="hobby-card__chevron" aria-hidden="true"></span>
+          <h3>Cafe</h3>
+          <p>甘いのすき</p>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: hinata.sato0308@gmail.com</p>
+  <p>github: <a href="https://github.com/SatoHinata">https://github.com/SatoHinata</a></p>
+</section>
+
+<footer>
+  <p>© 2026 Hinata Sato</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
