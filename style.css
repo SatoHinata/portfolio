@@ -497,6 +497,25 @@ h2 {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
+.works-card__thumb {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
+  display: none;
+  background: #ecebe9;
+}
+
+.works-card--has-thumb .works-card__preview .works-card__thumb {
+  display: block;
+}
+
+.works-card--has-thumb .works-card__preview .works-pdf-embed {
+  display: none;
+}
+
 embed.works-pdf-embed,
 .works-pdf-embed {
   flex: 1;
