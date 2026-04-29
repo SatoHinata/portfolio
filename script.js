@@ -277,6 +277,32 @@ function applyPdfToCard(card, encodedPath) {
   });
 }
 
+/** Works カード上部プレビューのサムネイル（data-thumbs と PDF を対応） */
+function applyPreviewThumb(card, index) {
+  const thumbs = card.__thumbUrls;
+  const img = card.querySelector('.works-card__preview .works-card__thumb');
+  if (!img || !thumbs || thumbs.length === 0) return;
+  const i = Math.min(Math.max(0, index), thumbs.length - 1);
+  const path = thumbs[i];
+  if (!path) {
+    card.classList.remove('works-card--has-thumb');
+    img.removeAttribute('src');
+    return;
+  }
+  img.src = encodedPathToAbsoluteHref(path);
+  card.classList.add('works-card--has-thumb');
+}
+
+function bindWorksThumbFallback(card) {
+  const img = card.querySelector('.works-card__preview .works-card__thumb');
+  if (!img || img.dataset.thumbFallbackBound) return;
+  img.dataset.thumbFallbackBound = '1';
+  img.addEventListener('error', () => {
+    card.classList.remove('works-card--has-thumb');
+    img.removeAttribute('src');
+  });
+}
+
 function setWorkCarouselIndex(card, index) {
   const urls = card.__pdfUrls;
   if (!urls || urls.length === 0) return;
@@ -284,6 +310,7 @@ function setWorkCarouselIndex(card, index) {
   const i = ((index % n) + n) % n;
   card.__slideIndex = i;
   applyPdfToCard(card, urls[i]);
+  applyPreviewThumb(card, i);
 
   card.querySelectorAll('.works-card__idx, .works-panel__idx').forEach((el) => {
     if (el) el.textContent = String(i + 1);
@@ -347,8 +374,20 @@ function initWorksCards() {
     card.__pdfUrls = urls;
     card.__slideIndex = 0;
 
+    const rawThumbs = card.getAttribute('data-thumbs');
+    if (rawThumbs) {
+      const thumbPaths = rawThumbs
+        .split('|')
+        .map((s) => s.trim())
+        .filter(Boolean)
+        .map((p) => encodeUtf8Path(p));
+      card.__thumbUrls = thumbPaths;
+      bindWorksThumbFallback(card);
+    }
+
     if (urls.length === 1) {
       applyPdfToCard(card, urls[0]);
+      applyPreviewThumb(card, 0);
       return;
     }
 
