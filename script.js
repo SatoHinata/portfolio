@@ -87,7 +87,8 @@ function layoutExperienceEmojiRail() {
     const y1 = yFromYear(birthT + startAge, timeline);
     let y2;
     if (endNow) {
-      y2 = yFromYear(birthT + endAgeNum, timeline);
+      // 「現在」はレールの一番下まで伸ばす（内挿の都合で途中止まりを防ぐ）
+      y2 = timeline.scrollHeight;
     } else {
       y2 = yFromYear(birthT + endAgeNum + 1, timeline);
     }
@@ -289,6 +290,7 @@ function applyPreviewThumb(card, index) {
     img.removeAttribute('src');
     return;
   }
+  card.classList.remove('works-card--thumb-missing');
   img.src = encodedPathToAbsoluteHref(path);
   card.classList.add('works-card--has-thumb');
 }
@@ -297,8 +299,19 @@ function bindWorksThumbFallback(card) {
   const img = card.querySelector('.works-card__preview .works-card__thumb');
   if (!img || img.dataset.thumbFallbackBound) return;
   img.dataset.thumbFallbackBound = '1';
+
+  if (img.getAttribute('src')) {
+    card.classList.add('works-card--has-thumb');
+  }
+
+  img.addEventListener('load', () => {
+    card.classList.add('works-card--has-thumb');
+    card.classList.remove('works-card--thumb-missing');
+  });
+
   img.addEventListener('error', () => {
     card.classList.remove('works-card--has-thumb');
+    card.classList.add('works-card--thumb-missing');
     img.removeAttribute('src');
   });
 }
