@@ -74,7 +74,7 @@ header {
 
 section {
   max-width: 800px;
-  margin: 60px auto;
+  margin: 80px auto;
   padding: 0 20px;
 }
 
@@ -85,7 +85,7 @@ h2 {
   color: var(--text);
 }
 
-.about-container {
+#about .container {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -93,8 +93,19 @@ h2 {
 
 .profile-header {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+#about .about-body {
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  #about .about-body {
+    padding-inline-start: calc(140px + 30px);
+  }
 }
 
 .profile-text h1 {
@@ -427,7 +438,8 @@ h2 {
 
 .works-card {
   background: #fff;
-  border-radius: 20px;
+  border-radius: 24px;
+  padding: 20px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -439,10 +451,13 @@ h2 {
 
 .works-card__preview {
   position: relative;
-  width: 100%;
+  width: calc(100% + 40px);
+  max-width: none;
+  margin: -20px -20px 0 -20px;
   height: 180px;
   background: var(--bg-soft);
   border-bottom: 1px solid var(--border);
+  border-radius: 24px 24px 0 0;
 }
 
 .works-pdf-slot {
@@ -1110,4 +1125,36 @@ footer {
   padding: 30px;
   font-size: 0.8rem;
   color: var(--text-faint);
+}
+
+
+/* Works thumbnail fallback/fix */
+.works-card__thumb[src]:not([src=""]) {
+  display: block;
+}
+
+.works-card--thumb-missing .works-card__preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works-card--thumb-missing .works-card__preview::after {
+  content: "PDF";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  border: 1px dashed var(--border-strong);
+  border-radius: 16px;
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  background: #f7f7f6;
+}
+
+.works-card--thumb-missing .works-card__preview .works-pdf-embed,
+.works-card--thumb-missing .works-card__preview .works-card__thumb {
+  display: none !important;
 }
