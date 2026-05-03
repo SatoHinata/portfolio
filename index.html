@@ -23,15 +23,15 @@
   <h2>About</h2>
   <div class="container">
     <div class="profile-header">
-      <img src="image_profile.jpg" class="profile-img" style="margin-inline-start: 1.25rem;">
-      <div class="profile-text" style="margin-inline-start: 7rem;">
+      <img src="image_profile.jpg" class="profile-img" alt="佐藤 雛歌のプロフィール写真">
+      <div class="profile-text">
         <h1>佐藤 雛歌 / Hinata Sato</h1>
         <p>🎂 2005年3月8日</p>
         <p>武蔵野大学データサイエンス学部</p>
         <p>Engineer / Data Science Student</p>
       </div>
     </div>
-    <p style="margin-inline-start: 3rem;">
+    <p class="about-body">
       ご覧いただきありがとうございます。<br>
       武蔵野大学データサイエンス学部の佐藤雛歌です。<br>
       現在はインターンでWebアプリケーションの開発に取り組んでいます。<br>
@@ -122,11 +122,12 @@
   </p>
   <div class="works-grid">
 
-    <article class="works-card" data-pdfs="work_Tripnote.pdf">
+    <article class="works-card" data-pdfs="work_Tripnote.pdf" data-thumbs="thumb_work_Tripnote.jpg">
       <div class="works-card__preview works-card__preview--single">
         <div class="works-pdf-slot works-pdf-slot--compact">
-          <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
-          <embed class="works-pdf-embed" type="application/pdf" src="" title="Tripnote プレビュー" />
+          <a class="works-pdf-tab" href="work_Tripnote.pdf" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+          <img class="works-card__thumb" src="thumb_work_Tripnote.jpg" alt="PDFのサムネイル" loading="lazy" />
+          <embed class="works-pdf-embed" type="application/pdf" src="work_Tripnote.pdf" title="Tripnote プレビュー" />
         </div>
       </div>
       <button type="button" class="works-card__trigger" id="works-trigger-1" aria-controls="works-panel-1" aria-expanded="false">
@@ -137,14 +138,22 @@
           <a href="https://tech-base.net/tb-270275/tripnote/index.php" target="_blank" rel="noopener noreferrer">https://tech-base.net/tb-270275/tripnote/index.php</a>
         </div>
       </button>
+      <div class="works-card__panel" id="works-panel-1" role="region" aria-labelledby="works-trigger-1" hidden>
+        <div class="works-panel__pdf">
+          <div class="works-pdf-slot works-pdf-slot--tall">
+            <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+            <embed class="works-pdf-embed works-pdf-embed--tall" type="application/pdf" src="" title="Tripnote" />
+          </div>
+        </div>
       </div>
     </article>
 
-    <article class="works-card" data-pdfs="work_random.pdf">
+    <article class="works-card" data-pdfs="work_random.pdf" data-thumbs="thumb_work_random.jpg">
       <div class="works-card__preview works-card__preview--single">
         <div class="works-pdf-slot works-pdf-slot--compact">
-          <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
-          <embed class="works-pdf-embed" type="application/pdf" src="" title="random プレビュー" />
+          <a class="works-pdf-tab" href="work_random.pdf" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+          <img class="works-card__thumb" src="thumb_work_random.jpg" alt="PDFのサムネイル" loading="lazy" />
+          <embed class="works-pdf-embed" type="application/pdf" src="work_random.pdf" title="random プレビュー" />
         </div>
       </div>
       <button type="button" class="works-card__trigger" id="works-trigger-2" aria-controls="works-panel-2" aria-expanded="false">
@@ -164,11 +173,12 @@
       </div>
     </article>
 
-    <article class="works-card" data-pdfs="work_chronotype.pdf">
+    <article class="works-card" data-pdfs="work_chronotype.pdf" data-thumbs="thumb_work_chronotype.jpg">
       <div class="works-card__preview works-card__preview--single">
         <div class="works-pdf-slot works-pdf-slot--compact">
-          <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
-          <embed class="works-pdf-embed" type="application/pdf" src="" title="Chronotype プレビュー" />
+          <a class="works-pdf-tab" href="work_chronotype.pdf" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+          <img class="works-card__thumb" src="thumb_work_chronotype.jpg" alt="PDFのサムネイル" loading="lazy" />
+          <embed class="works-pdf-embed" type="application/pdf" src="work_chronotype.pdf" title="Chronotype プレビュー" />
         </div>
       </div>
       <button type="button" class="works-card__trigger" id="works-trigger-4" aria-controls="works-panel-4" aria-expanded="false">
@@ -188,13 +198,14 @@
       </div>
     </article>
 
-    <article class="works-card works-card--multi" data-pdfs="work_Piano score slide.pdf|work_Piano score.pdf">
+    <article class="works-card works-card--multi" data-pdfs="work_Piano score slide.pdf|work_Piano score.pdf" data-thumbs="thumb_work_Piano_score_slide.jpg|thumb_work_Piano_score.jpg">
       <div class="works-card__preview works-card__preview--carousel">
         <div class="works-card__preview-stack">
           <div class="works-card__iframe-wrap">
             <div class="works-pdf-slot works-pdf-slot--carousel">
-              <a class="works-pdf-tab" href="#" target="_blank" rel="noopener noreferrer">別タブで開く</a>
-              <embed class="works-pdf-embed" type="application/pdf" src="" title="PDF プレビュー" />
+              <a class="works-pdf-tab" href="work_Piano score slide.pdf" target="_blank" rel="noopener noreferrer">別タブで開く</a>
+              <img class="works-card__thumb" src="thumb_work_Piano_score_slide.jpg" alt="PDFのサムネイル" loading="lazy" />
+              <embed class="works-pdf-embed" type="application/pdf" src="work_Piano score slide.pdf" title="PDF プレビュー" />
             </div>
           </div>
           <button type="button" class="works-card__arrow works-card__arrow--prev" aria-label="前のPDF">&lsaquo;</button>
@@ -408,6 +419,7 @@
           <h3>Travel</h3>
           <p>だいたいホームステイをしています！</p>
         </div>
+      </button>
     </div>
 
     <div class="hobby-card" data-hobby-images="image_music.jpg">
@@ -427,6 +439,7 @@
           <h3>Music</h3>
           <p>小さい頃からエレクトーンやピアノなどを習っていて、なんでも聞きます^_^</p>
         </div>
+      </button>
     </div>
 
     <div class="hobby-card" data-hobby-images="image_cafe.jpg">
@@ -446,6 +459,7 @@
           <h3>Cafe</h3>
           <p>甘いのすき</p>
         </div>
+      </button>
     </div>
 
   </div>
